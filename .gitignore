@@ -1,0 +1,10 @@
+node_modules
+.eslintcache
+coverage
+.DS_Store
+.idea
+build
+.vscode
+renovate.log
+*.log
+*.iml

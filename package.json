@@ -1,0 +1,16 @@
+{
+  "name": "origin-renovate",
+  "version": "1.0.0",
+  "description": "The renovate bot used to keep all repositories up to date w.r.t dependencies",
+  "main": "index.js",
+  "repository": "ssh://git@bitbucket.origin.com.au/od/origin-renovate.git",
+  "author": "Ali Motevallian <ali.motevallian@originenergy.com.au>",
+  "license": "NO LICENSE",
+  "private": true,
+  "scripts": {
+    "renovate": "renovate"
+  },
+  "dependencies": {
+    "renovate": "35.82.0"
+  }
+}

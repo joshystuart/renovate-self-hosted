@@ -1,0 +1,74 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "schedule": [
+    "every weekday"
+  ],
+  "rebaseWhen": "auto",
+  "rebaseLabel": "rebase",
+  "semanticCommits": true,
+  "requiredStatusChecks": [],
+  "ignoreDeps": [
+    "react",
+    "react-dom",
+    "polished",
+    "styled-system",
+    "@types/styled-components",
+    "@types/react",
+    "@types/react-dom",
+    "core-js",
+    "node",
+    "node-fetch",
+    "@testing-library/react"
+  ],
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "minor dev dependencies",
+      "groupSlug": "dev-minor",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dev dependencies",
+      "groupSlug": "dev-major",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "minor dependencies",
+      "groupSlug": "minor",
+      "automerge": false
+    },
+    {
+      "matchDepTypes": [
+        "dependencies"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "major dependencies",
+      "groupSlug": "major",
+      "automerge": false
+    }
+  ]
+}
